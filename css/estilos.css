@@ -166,6 +166,7 @@ header {
 	background-color: #dcdcf5;
 	background: linear-gradient(#dcdcf5, #f4bebe);
 }
+/* Rodape do site */
 footer {
 	clear: both;
 	background-image: url(../img/fundo-rodape.png);
