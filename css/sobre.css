@@ -6,6 +6,22 @@ body {
 	margin-right: auto;
 	width: 940px;
 }
+
+header {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.menu-opcoes {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.menu-opcoes ul li{
+	display: inline;
+}
+
 h1 {
 	background-image: url(../img/sobre-background.jpg);
 	padding: 10px;
