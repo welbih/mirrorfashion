@@ -8,14 +8,28 @@ body {
 	width: 940px;
 }
 
+header {
+	position: relative;
+}
+
 .sacola {
 	background: url(../img/sacola.png) no-repeat top right;
 
 	font-size: 14px;
+	text-align: right;
+
+	position: absolute;
+	top: 0;
+	right: 0;
 	padding-right: 35px;
 	padding-top: 8px;
-	text-align: right;
 	width: 140px;
+}
+
+.menu-opcoes {
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
 
 .menu-opcoes ul {
