@@ -1,0 +1,18 @@
+/*.form-control:invalid {
+	border: 1px solid #c00;
+}*/
+
+body {
+	padding-top: 70px;
+}
+.navbar {
+	margin: 0;
+}
+
+.navbar .glyphicon {
+	color: yellow;
+}
+
+.navbar-header img{
+	width: 180px;
+}
