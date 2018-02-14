@@ -60,8 +60,18 @@
 								<dd><?= $_POST['nome'] ?></dd>
 								
 								<dt>Preço</dt>
-								<dd><?= $_POST['preco'] ?></dd>
+								<dd id="preco">R$ <?= $_POST['preco'] ?></dd>
 							</dl>
+							<div class="form-group">
+								<label for="qt">Quantidade</label>
+								<input id="qt" class="form-control" type="number" min="0" max="99" value="1">
+							</div>
+							<div class="form-group">
+								<label for="total">Total</label>
+								<output for="qt preco" id="total" class="form-control">
+									<?= $_POST["preco"] ?>
+								</output>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -93,7 +103,7 @@
 							</div>
 							<div class="form-group">
 								<label for="cpf">CPF</label>
-								<input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" required="true">
+								<input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" required="true" data-mask="999.999.999-99">
 							</div>
 
 							<div class="checkbox">
@@ -107,7 +117,7 @@
 							<legend>Cartão de crédito</legend>
 							<div class="form-group">
 								<label for="numero-cartao">Número - CVV</label>
-								<input type="text" class="form-control" id="numero-cartao" name="numero-cartao">
+								<input type="text" class="form-control" id="numero-cartao" name="numero-cartao" data-mask="9999 9999 9999 9999 - 999">
 							</div>
 
 							<div class="form-group">
@@ -131,8 +141,35 @@
 					</button>
 				</form>
 			</div>
-		</div>		
+		</div>	
 		<script src="js/jquery.js"></script>
+		<script src="js/inputmask-plugin.js"></script>
+		<script src="js/total.js"></script>	
 		<script src="js/bootstrap.js"></script>
+		<script type="text/javascript">
+			document.querySelector('form input').oninvalid = function(event) {
+				// cancela comportamento pardão do navegador
+				event.preventDefault();
+
+				// outra forma de desabilitar  a validação, afetando o formulário inteiro, é colocando o atributo
+				//novalidate na tag <form>.
+
+				// verifica a valdidade e mostra o alert
+				if(!this.validity.valid) {
+					alert("Nome obrigatório!");
+				}
+			};
+
+			document.querySelector('input[type=email]').oninvalid = function() {
+				// remove mensagens de erro antigas
+				this.setCustomValidity("");
+
+				//executa novamente a validação
+				if(!this.validity.valid) {
+					// se inválido, coloca mensagem de erro
+					this.setCustomValidity("Email inválido pela madrugada.");
+				}
+			}
+		</script>
 	</body>
 </html>

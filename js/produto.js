@@ -5,4 +5,6 @@ function mostraTamanho() {
 	outputTamanho.value = inputTamanho.value
 }
 
-inputTamanho.oninput = mostraTamanho
+inputTamanho.oninput = function(){
+	outputTamanho.value = inputTamanho.value
+}

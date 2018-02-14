@@ -38,6 +38,7 @@
 			</section><!-- fim .menu-departamentos-->
 
 			<img src="img/destaque-home.png" alt="Promoção: Big City Night">
+			<a href="#" class="pause"></a>
 		</div><!-- fim .container .destaque-->
 		<div class="container paineis">
 			<section class="painel novidades">
@@ -134,6 +135,7 @@
 						</a>
 					</li>
 				</ol>
+				<button type="button">Mostra mais</button>
 			</section>
 			<section class="painel mais-vendidos">
 				<h2>Mais Vendidos</h2>
@@ -181,8 +183,11 @@
 						</a>
 					</li>
 				</ol>
+				<button type="button">Mostra mais</button>
 			</section>
 			<?php include("rodape.php"); ?>
 		</div>
+		<script src="js/jquery.js"></script>
+		<script src="js/home.js"></script>
 	</body>
 </html>
